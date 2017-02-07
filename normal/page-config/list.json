@@ -3,6 +3,7 @@
 		"title": "第二个页面"
 	},
 	"entry-js": "./src/pages/entry-js/list.js",
+	"entry-css": "./src/pages/entry-style/list.less",
 	"layout": {
 		"header": {
 			"temp": "./src/common/template/common-header.html",

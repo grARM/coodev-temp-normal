@@ -4,6 +4,10 @@
 	},
 	"entry-js": "./src/pages/entry-js/index.js",
 	"layout": {
+		"meta": {
+			"temp": "./src/common/template/common-meta.html",
+			"data": ""
+		},
 		"header": {
 			"temp": "./src/common/template/common-header.html",
 			"data": ""

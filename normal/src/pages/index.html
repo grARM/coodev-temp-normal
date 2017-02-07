@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<!-- <meta charset="UTF-8"> -->
+	<%if(htmlWebpackPlugin.options.layout.meta){%>
+	<%= htmlWebpackPlugin.options.layout.meta %>
+	<%} else {%>
 	<meta charset="UTF-8">
+	<%}%>
+	
 	<title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
