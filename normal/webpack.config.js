@@ -22,9 +22,14 @@ _.each(coodevConfig.pages, function (v, i) {
   var layoutContent = {}
   _.each(pageConfig.layout, function (v, k) {
     var data = {};
-    if(v.data !== ''){
-      data = require(path.resolve(ROOT_PATH, v.data));
+    if(_.isObject(v.data)){
+      data = _.extend({}, v.data);
+    } else if(_.isString(v.data)){
+      if(v.data !== ''){
+        data = require(path.resolve(ROOT_PATH, v.data));
+      }
     }
+    
     var tempStr = fs.readFileSync(path.resolve(ROOT_PATH, v.temp), 'UTF-8');
     var tempFun = _.template(tempStr);
     layoutContent[k] = tempFun(data);
@@ -59,20 +64,9 @@ module.exports = {
         test : /\.(less|css)$/,
         loader: ExtractTextPlugin.extract('style', 'css!less')
       }
-      // { test: /\.css$/, loader: extractCSS.extract(['css']) },
-      // { test: /\.less/, loader: extractCSS.extract(['css', 'less'])}
     ]
   },
-  // resolve: {
-  //   root: [
-  //     ROOT_PATH
-  //   ]
-  // },
   plugins: ([
     extractCSS
   ]).concat(webpackHtml)
-  // ,
-  // plugins: [
-  //   new webpack.BannerPlugin('#!/usr/bin/env node')
-  // ]
 };

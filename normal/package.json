@@ -4,7 +4,7 @@
   "description": "基于coodev的normal工程模板",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
+    "init": "cnpm install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,8 +24,10 @@
     "jquery": "^1.7.2",
     "less": "^2.7.2",
     "less-loader": "^2.2.3",
+    "ora": "^1.1.0",
     "style-loader": "^0.13.1",
     "underscore": "^1.8.3",
-    "webpack": "^1.14.0"
+    "webpack": "^1.14.0",
+    "webpack-merge": "^2.6.1"
   }
 }
