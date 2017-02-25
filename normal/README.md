@@ -3,6 +3,9 @@
 
 [TOC]
 
+### 命令
+可通过在控制台输入`$ coodev -help` 查看coodev的命令
+
 ### 工程基本目录
 工程的根目录下主要是以下几个文件夹：`src` 、`dist` 、`page-config`
 *src* :工程源码，开发用的文件夹。其中有3个文件夹：`common` （共用部分）、`modules`（页面模块） 、`pages`（入口文件）。
