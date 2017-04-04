@@ -1,0 +1,10 @@
+{
+	"pages": ["index", "list"],
+	"common-js": [
+	],
+	"common-css": [
+	],
+	"publish-dir": "",
+	"server-render-language": "velocity",
+	"style-precompiled": "less"
+}
