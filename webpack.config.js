@@ -20,31 +20,31 @@ _.each(coodevConfig.pages, function (v, i) {
   var pageConfig = require(path.resolve(ROOT_PATH, './page-config/' + v + '.json'));
   webpackEntry[v] = path.resolve(ROOT_PATH, pageConfig['entry-js']);
   /**/
-  var layoutContent = {}
-  _.each(pageConfig.layout, function (v, k) {
-    var data = {};
-    if(_.isObject(v.data)){
-      data = _.extend({}, v.data);
-    } else if(_.isString(v.data)){
-      if(v.data !== ''){
-        data = require(path.resolve(ROOT_PATH, v.data));
-      }
-    }
+  // var layoutContent = {}
+  // _.each(pageConfig.layout, function (v, k) {
+  //   var data = {};
+  //   if(_.isObject(v.data)){
+  //     data = _.extend({}, v.data);
+  //   } else if(_.isString(v.data)){
+  //     if(v.data !== ''){
+  //       data = require(path.resolve(ROOT_PATH, v.data));
+  //     }
+  //   }
     
-    var tempStr = fs.readFileSync(path.resolve(ROOT_PATH, v.temp), 'UTF-8');
-    var tempFun = _.template(tempStr);
-    layoutContent[k] = tempFun(data);
-  });
-  /**/
-  var html = new HtmlWebpackPlugin({
-      filename: (path.resolve(ROOT_PATH, './dist/pages/' + v + '.html')),
-      template: (path.resolve(ROOT_PATH, './src/pages/' + v + '.html')),
-      inject: true,
-      chunks: [v],
-      title: pageConfig.data.title,
-      layout: layoutContent
-  });
-  webpackHtml.push(html);
+  //   var tempStr = fs.readFileSync(path.resolve(ROOT_PATH, v.temp), 'UTF-8');
+  //   var tempFun = _.template(tempStr);
+  //   layoutContent[k] = tempFun(data);
+  // });
+  // /**/
+  // var html = new HtmlWebpackPlugin({
+  //     filename: (path.resolve(ROOT_PATH, './dist/pages/' + v + '.html')),
+  //     template: (path.resolve(ROOT_PATH, './src/pages/' + v + '.html')),
+  //     inject: true,
+  //     chunks: [v],
+  //     title: pageConfig.data.title,
+  //     layout: layoutContent
+  // });
+  // webpackHtml.push(html);
 });
 
 var extractCSS = new ExtractTextPlugin("../styles/[name].css");
