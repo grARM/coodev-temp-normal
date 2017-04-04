@@ -15,6 +15,7 @@ var coodevConfig = require(coodevConfigPath);
 var webpackEntry = {};
 var webpackHtml = [];
 
+/* render pages  */
 _.each(coodevConfig.pages, function (v, i) {
   var pageConfig = require(path.resolve(ROOT_PATH, './page-config/' + v + '.json'));
   webpackEntry[v] = path.resolve(ROOT_PATH, pageConfig['entry-js']);
