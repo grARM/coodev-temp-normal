@@ -77,10 +77,14 @@ module.exports = {
   },
   module: {
     loaders: [
-      styleLoader
+      styleLoader,
+      {
+        'test': /\.html$/,
+        'loader': "html?attr=false"
+      }
     ]
   },
   plugins: ([
     extractCSS
-  ]).concat(webpackHtml)
+  ])//.concat(webpackHtml)
 };
