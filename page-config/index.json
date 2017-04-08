@@ -12,6 +12,10 @@
 			"temp":"./src/common/template/common-body-test.html",
 			"data": "./src/common/template/common-body-test.mock.json"
 		},
+		"first-module": {
+			"temp": "./src/modules/first-module/module.html",
+			"data": ""
+		},
 		"footer": {
 			"temp": "./src/common/template/common-footer.html",
 			"data": ""
