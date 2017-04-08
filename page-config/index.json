@@ -8,10 +8,6 @@
 			"temp": "./src/common/template/common-meta.html",
 			"data": ""
 		},
-		"header": {
-			"temp": "./src/common/template/common-header.html",
-			"data": ""
-		},
 		"body": {
 			"temp":"./src/common/template/common-body-test.html",
 			"data": "./src/common/template/common-body-test.mock.json"
