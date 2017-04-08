@@ -6,5 +6,6 @@
 	],
 	"publish-dir": "",
 	"server-render-language": "velocity",
-	"style-precompiled": "less"
+	"style-precompiled": "less",
+	"server-port": "8080"
 }
